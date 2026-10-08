@@ -66,3 +66,9 @@ class HomePage(BasePage):
         self.driver.close()
         self.driver.switch_to.window(original_tab)
         return self.wait_logged_in()
+
+    def back_and_refresh(self):
+        self.driver.back()
+        self.driver.refresh()
+        self._visible(self._LOGIN_LINK)
+        return self

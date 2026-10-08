@@ -173,3 +173,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Đăng nhập → tạo tab mới tới website → xác minh → đóng tab mới, quay lại tab cũ.
 - Kỳ vọng: Tab mới dùng cùng phiên, đúng tên; quay lại tab cũ vẫn giữ phiên.
 - Tự động hóa: tests/test_tc18_session_new_tab.py.
+
+## TC19 - Back và Refresh sau đăng xuất không khôi phục phiên
+
+- Nhóm / ưu tiên: session / Cao.
+- Tiền điều kiện: Tài khoản riêng đăng nhập rồi đăng xuất trong chính test.
+- Dữ liệu: Lịch sử trình duyệt vừa có trang đã đăng nhập.
+- Bước: Đăng nhập → Logout → Back → Refresh để kiểm tra trạng thái mới từ server.
+- Kỳ vọng: Sau refresh hiện Signup / Login, không hiện tên tài khoản/Logout. Không kết luận an toàn backend chỉ từ kiểm tra UI này.
+- Tự động hóa: tests/test_tc19_logout_back_refresh.py.

@@ -65,3 +65,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Nhập dữ liệu → bấm Login → chờ thông báo từ server.
 - Kỳ vọng: Báo thông tin đăng nhập sai; vẫn ở /login, không hiện tài khoản đã đăng nhập.
 - Tự động hóa: tests/test_tc06_unknown_email.py.
+
+## TC07 - Email thiếu ký tự @
+
+- Nhóm / ưu tiên: validation / Cao.
+- Tiền điều kiện: Không cần tài khoản; mở /login.
+- Dữ liệu: Email invalid.example.com; mật khẩu DummyPass9!.
+- Bước: Nhập dữ liệu → bấm Login.
+- Kỳ vọng: Email có typeMismatch=true, valid=false; có thông báo; focus vào email; vẫn ở /login.
+- Tự động hóa: tests/test_tc07_email_without_at.py.

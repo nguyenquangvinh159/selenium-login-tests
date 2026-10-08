@@ -128,3 +128,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Focus email → nhập → Tab → nhập mật khẩu → Tab → Enter.
 - Kỳ vọng: Focus lần lượt email, password, Login; sau Enter hiện đúng tên và Logout.
 - Tự động hóa: tests/test_tc13_keyboard_navigation.py.
+
+## TC14 - Đăng nhập lại thành công sau khi nhập sai
+
+- Nhóm / ưu tiên: positive / Cao.
+- Tiền điều kiện: Tạo tài khoản riêng; mở /login.
+- Dữ liệu: Lần 1 sai mật khẩu; lần 2 đúng cùng tài khoản.
+- Bước: Gửi sai → chờ lỗi → nhập lại đúng → gửi.
+- Kỳ vọng: Lần đầu bị từ chối; lần sau đăng nhập đúng tài khoản, không cần mở trình duyệt mới.
+- Tự động hóa: tests/test_tc14_recover_after_error.py.

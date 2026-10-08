@@ -83,3 +83,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Nhập dữ liệu → bấm Login.
 - Kỳ vọng: Email báo typeMismatch; có thông báo và focus email; vẫn ở /login.
 - Tự động hóa: tests/test_tc08_email_without_domain.py.
+
+## TC09 - Mật khẩu phân biệt chữ hoa và chữ thường
+
+- Nhóm / ưu tiên: negative / Cao.
+- Tiền điều kiện: Tạo tài khoản với mật khẩu có cả chữ hoa và chữ thường; mở /login.
+- Dữ liệu: Email đúng; mật khẩu đảo hoa/thường bằng swapcase().
+- Bước: Nhập dữ liệu → bấm Login → chờ phản hồi.
+- Kỳ vọng: Báo thông tin sai; không tạo phiên đăng nhập.
+- Tự động hóa: tests/test_tc09_password_case_sensitive.py.

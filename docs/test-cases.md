@@ -137,3 +137,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Gửi sai → chờ lỗi → nhập lại đúng → gửi.
 - Kỳ vọng: Lần đầu bị từ chối; lần sau đăng nhập đúng tài khoản, không cần mở trình duyệt mới.
 - Tự động hóa: tests/test_tc14_recover_after_error.py.
+
+## TC15 - Đăng xuất kết thúc phiên đăng nhập
+
+- Nhóm / ưu tiên: session / Cao.
+- Tiền điều kiện: Tài khoản riêng đã đăng nhập thành công trong chính test.
+- Dữ liệu: Email và mật khẩu đúng.
+- Bước: Đăng nhập → bấm Logout.
+- Kỳ vọng: Quay lại /login, hiện form và Signup / Login; không còn tên tài khoản hoặc Logout.
+- Tự động hóa: tests/test_tc15_logout.py.

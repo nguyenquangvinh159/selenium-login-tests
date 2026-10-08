@@ -74,3 +74,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Nhập dữ liệu → bấm Login.
 - Kỳ vọng: Email có typeMismatch=true, valid=false; có thông báo; focus vào email; vẫn ở /login.
 - Tự động hóa: tests/test_tc07_email_without_at.py.
+
+## TC08 - Email thiếu tên miền
+
+- Nhóm / ưu tiên: validation / Cao.
+- Tiền điều kiện: Không cần tài khoản; mở /login.
+- Dữ liệu: Email abc@; mật khẩu DummyPass9!.
+- Bước: Nhập dữ liệu → bấm Login.
+- Kỳ vọng: Email báo typeMismatch; có thông báo và focus email; vẫn ở /login.
+- Tự động hóa: tests/test_tc08_email_without_domain.py.

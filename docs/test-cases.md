@@ -164,3 +164,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Đăng nhập → bấm Products → bấm Home.
 - Kỳ vọng: Đến đúng /products rồi /; tên tài khoản giữ nguyên và vẫn có Logout.
 - Tự động hóa: tests/test_tc17_session_navigation.py.
+
+## TC18 - Chia sẻ phiên đăng nhập trong tab mới
+
+- Nhóm / ưu tiên: session / Cao.
+- Tiền điều kiện: Tài khoản riêng đăng nhập trong chính test; bắt đầu với một tab.
+- Dữ liệu: Cùng profile Chrome, cùng website.
+- Bước: Đăng nhập → tạo tab mới tới website → xác minh → đóng tab mới, quay lại tab cũ.
+- Kỳ vọng: Tab mới dùng cùng phiên, đúng tên; quay lại tab cũ vẫn giữ phiên.
+- Tự động hóa: tests/test_tc18_session_new_tab.py.

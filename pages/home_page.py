@@ -50,3 +50,19 @@ class HomePage(BasePage):
         self._click(self._HOME)
         self.wait.until(lambda _: self.path == '/')
         return self.wait_logged_in()
+
+    def current_tab(self):
+        return self.driver.current_window_handle
+
+    def tab_count(self):
+        return len(self.driver.window_handles)
+
+    def open_new_tab(self):
+        self.driver.switch_to.new_window('tab')
+        self.driver.get(self.base_url + '/')
+        return self.wait_logged_in()
+
+    def close_tab_and_return(self, original_tab):
+        self.driver.close()
+        self.driver.switch_to.window(original_tab)
+        return self.wait_logged_in()

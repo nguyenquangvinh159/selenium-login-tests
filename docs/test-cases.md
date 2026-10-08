@@ -47,3 +47,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Bấm Login khi chưa nhập dữ liệu.
 - Kỳ vọng: Cả hai trường báo thiếu; email nhận focus trước; vẫn ở /login.
 - Tự động hóa: tests/test_tc04_both_fields_empty.py.
+
+## TC05 - Email tồn tại nhưng mật khẩu sai
+
+- Nhóm / ưu tiên: negative / Cao.
+- Tiền điều kiện: Tạo tài khoản riêng bằng API; mở /login.
+- Dữ liệu: Email đúng, mật khẩu thêm _wrong.
+- Bước: Nhập dữ liệu → bấm Login → chờ thông báo từ server.
+- Kỳ vọng: Thông báo Your email or password is incorrect!; ở /login, không hiện tài khoản đã đăng nhập.
+- Tự động hóa: tests/test_tc05_wrong_password.py.

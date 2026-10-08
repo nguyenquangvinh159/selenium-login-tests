@@ -45,3 +45,6 @@ class LoginPage(BasePage):
 
     def focused_field(self):
         return self.driver.switch_to.active_element.get_attribute('data-qa')
+
+    def has_authenticated_user(self):
+        return HomePage(self.driver, self.base_url, self.timeout).has_authenticated_user()

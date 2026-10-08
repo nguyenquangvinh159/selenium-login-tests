@@ -18,3 +18,7 @@ class HomePage(BasePage):
 
     def logout_is_visible(self):
         return self._visible(self._LOGOUT).is_displayed()
+
+    def has_authenticated_user(self):
+        return any(e.is_displayed() for locator in (self._ACCOUNT_NAME, self._LOGOUT)
+                   for e in self.driver.find_elements(*locator))

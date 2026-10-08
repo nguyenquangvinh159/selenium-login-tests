@@ -155,3 +155,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Đăng nhập → refresh trang hiện tại.
 - Kỳ vọng: Sau tải lại vẫn hiện đúng tên và Logout.
 - Tự động hóa: tests/test_tc16_session_after_refresh.py.
+
+## TC17 - Duy trì phiên khi chuyển trang
+
+- Nhóm / ưu tiên: session / Cao.
+- Tiền điều kiện: Tài khoản riêng đăng nhập trong chính test.
+- Dữ liệu: Tài khoản thử nghiệm đúng.
+- Bước: Đăng nhập → bấm Products → bấm Home.
+- Kỳ vọng: Đến đúng /products rồi /; tên tài khoản giữ nguyên và vẫn có Logout.
+- Tự động hóa: tests/test_tc17_session_navigation.py.

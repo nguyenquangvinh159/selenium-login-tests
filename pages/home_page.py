@@ -37,3 +37,16 @@ class HomePage(BasePage):
     def refresh(self):
         self.driver.refresh()
         return self.wait_logged_in()
+
+    _PRODUCTS = (By.CSS_SELECTOR, 'a[href="/products"]')
+    _HOME = (By.XPATH, '//header//a[contains(., "Home")]')
+
+    def go_to_products(self):
+        self._click(self._PRODUCTS)
+        self.wait.until(lambda _: self.path == '/products')
+        return self.wait_logged_in()
+
+    def go_home(self):
+        self._click(self._HOME)
+        self.wait.until(lambda _: self.path == '/')
+        return self.wait_logged_in()

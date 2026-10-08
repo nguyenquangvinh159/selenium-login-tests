@@ -20,3 +20,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: nhập email → nhập mật khẩu → bấm Login.
 - Kỳ vọng: chuyển về /, hiển thị chính xác tên tài khoản và link Logout.
 - Tự động hóa: tests/test_tc01_valid_login.py.
+
+## TC02 - Bỏ trống mật khẩu
+
+- Nhóm / ưu tiên: Validation / Cao; ca bắt buộc của đề bài trang 63.
+- Tiền điều kiện: trình duyệt sạch mở /login; không cần tài khoản vì validation chạy trước khi gửi.
+- Dữ liệu: email validation@example.com, mật khẩu rỗng.
+- Bước: nhập email → để trống mật khẩu → bấm Login.
+- Kỳ vọng: password có valueMissing=true, valid=false, thông báo không rỗng; focus vào mật khẩu; vẫn ở /login.
+- Tự động hóa: tests/test_tc02_missing_password.py.

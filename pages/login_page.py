@@ -33,3 +33,15 @@ class LoginPage(BasePage):
 
     def is_displayed(self):
         return self.path == '/login' and self._visible(self._EMAIL).is_displayed()
+
+    def field_validity(self, field):
+        locator = {'email': self._EMAIL, 'password': self._PASSWORD}[field]
+        return self.driver.execute_script(
+            'const e = arguments[0]; return {valid: e.validity.valid, '
+            'valueMissing: e.validity.valueMissing, '
+            'typeMismatch: e.validity.typeMismatch, '
+            'message: e.validationMessage};', self._visible(locator)
+        )
+
+    def focused_field(self):
+        return self.driver.switch_to.active_element.get_attribute('data-qa')

@@ -38,3 +38,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Để trống email → nhập mật khẩu → bấm Login.
 - Kỳ vọng: Email có valueMissing=true, valid=false, thông báo không rỗng; focus vào email; vẫn ở /login.
 - Tự động hóa: tests/test_tc03_missing_email.py.
+
+## TC04 - Bỏ trống cả email và mật khẩu
+
+- Nhóm / ưu tiên: validation / Cao.
+- Tiền điều kiện: Không cần tài khoản; mở /login trong trình duyệt sạch.
+- Dữ liệu: Cả hai trường rỗng.
+- Bước: Bấm Login khi chưa nhập dữ liệu.
+- Kỳ vọng: Cả hai trường báo thiếu; email nhận focus trước; vẫn ở /login.
+- Tự động hóa: tests/test_tc04_both_fields_empty.py.

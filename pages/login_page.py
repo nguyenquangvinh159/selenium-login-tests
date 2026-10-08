@@ -59,3 +59,18 @@ class LoginPage(BasePage):
         from selenium.webdriver.common.keys import Keys
         self._visible(self._PASSWORD).send_keys(Keys.ENTER)
         return HomePage(self.driver, self.base_url, self.timeout).wait_logged_in()
+
+    def focus_email(self):
+        self._click(self._EMAIL)
+
+    def type_focused(self, value):
+        self.driver.switch_to.active_element.send_keys(value)
+
+    def press_tab(self):
+        from selenium.webdriver.common.keys import Keys
+        self.driver.switch_to.active_element.send_keys(Keys.TAB)
+
+    def activate_focused_submit(self):
+        from selenium.webdriver.common.keys import Keys
+        self.driver.switch_to.active_element.send_keys(Keys.ENTER)
+        return HomePage(self.driver, self.base_url, self.timeout).wait_logged_in()

@@ -119,3 +119,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Điền hai trường → nhấn Enter từ ô mật khẩu.
 - Kỳ vọng: Đăng nhập thành công, hiện đúng tên và Logout.
 - Tự động hóa: tests/test_tc12_submit_with_enter.py.
+
+## TC13 - Đăng nhập hoàn toàn bằng bàn phím
+
+- Nhóm / ưu tiên: ui / Trung bình.
+- Tiền điều kiện: Tạo tài khoản riêng; mở /login.
+- Dữ liệu: Email và mật khẩu đúng.
+- Bước: Focus email → nhập → Tab → nhập mật khẩu → Tab → Enter.
+- Kỳ vọng: Focus lần lượt email, password, Login; sau Enter hiện đúng tên và Logout.
+- Tự động hóa: tests/test_tc13_keyboard_navigation.py.

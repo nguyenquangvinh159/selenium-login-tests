@@ -54,3 +54,8 @@ class LoginPage(BasePage):
 
     def password_value(self):
         return self._visible(self._PASSWORD).get_property('value')
+
+    def submit_with_enter(self):
+        from selenium.webdriver.common.keys import Keys
+        self._visible(self._PASSWORD).send_keys(Keys.ENTER)
+        return HomePage(self.driver, self.base_url, self.timeout).wait_logged_in()

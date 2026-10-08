@@ -110,3 +110,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Nhập dữ liệu và đọc thuộc tính trường mật khẩu.
 - Kỳ vọng: Trường giữ đúng giá trị đã nhập nhưng có type=password để trình duyệt che ký tự.
 - Tự động hóa: tests/test_tc11_password_masked.py.
+
+## TC12 - Đăng nhập bằng phím Enter
+
+- Nhóm / ưu tiên: positive / Cao.
+- Tiền điều kiện: Tạo tài khoản riêng; mở /login.
+- Dữ liệu: Email và mật khẩu đúng.
+- Bước: Điền hai trường → nhấn Enter từ ô mật khẩu.
+- Kỳ vọng: Đăng nhập thành công, hiện đúng tên và Logout.
+- Tự động hóa: tests/test_tc12_submit_with_enter.py.

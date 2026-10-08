@@ -56,3 +56,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Nhập dữ liệu → bấm Login → chờ thông báo từ server.
 - Kỳ vọng: Thông báo Your email or password is incorrect!; ở /login, không hiện tài khoản đã đăng nhập.
 - Tự động hóa: tests/test_tc05_wrong_password.py.
+
+## TC06 - Email chưa đăng ký
+
+- Nhóm / ưu tiên: negative / Cao.
+- Tiền điều kiện: Không tạo tài khoản; mở /login.
+- Dữ liệu: Email unregistered_<UUID>@example.com chưa được tạo; mật khẩu DummyPass9!.
+- Bước: Nhập dữ liệu → bấm Login → chờ thông báo từ server.
+- Kỳ vọng: Báo thông tin đăng nhập sai; vẫn ở /login, không hiện tài khoản đã đăng nhập.
+- Tự động hóa: tests/test_tc06_unknown_email.py.

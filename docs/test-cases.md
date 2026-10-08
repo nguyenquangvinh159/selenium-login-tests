@@ -29,3 +29,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: nhập email → để trống mật khẩu → bấm Login.
 - Kỳ vọng: password có valueMissing=true, valid=false, thông báo không rỗng; focus vào mật khẩu; vẫn ở /login.
 - Tự động hóa: tests/test_tc02_missing_password.py.
+
+## TC03 - Bỏ trống email
+
+- Nhóm / ưu tiên: validation / Cao.
+- Tiền điều kiện: Không cần tài khoản; mở /login trong trình duyệt sạch.
+- Dữ liệu: Email rỗng, mật khẩu DummyPass9!.
+- Bước: Để trống email → nhập mật khẩu → bấm Login.
+- Kỳ vọng: Email có valueMissing=true, valid=false, thông báo không rỗng; focus vào email; vẫn ở /login.
+- Tự động hóa: tests/test_tc03_missing_email.py.

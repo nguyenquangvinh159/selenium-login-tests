@@ -1,0 +1,21 @@
+﻿Mã TC,Tên Test Case,Nhóm,Kết Quả,Ghi Chú
+TC01,Valid login,positive,PASS,
+TC02,Missing password,validation,PASS,
+TC03,Missing email,validation,PASS,
+TC04,Both fields empty,validation,PASS,
+TC05,Wrong password,negative,PASS,
+TC06,Unknown email,negative,PASS,
+TC07,Email without at,validation,PASS, bị lỗi chập chờn (flakey) do server automationexercise.com bị timeout và trả về lỗi 503 khi dọn dẹp account
+TC08,Email without domain,validation,PASS,
+TC09,Password case sensitive,negative,PASS,
+TC10,Whitespace password,negative,PASS,
+TC11,Password masked,ui,PASS,
+TC12,Submit with enter,ui,PASS,
+TC13,Keyboard navigation,ui,PASS,
+TC14,Recover after error,ui,PASS,
+TC15,Logout,session,PASS,
+TC16,Session after refresh,session,PASS, bị lỗi chập chờn (flakey) do server automationexercise.com bị timeout và trả về lỗi 503 khi dọn dẹp account
+TC17,Session navigation,session,PASS,
+TC18,Session new tab,session,PASS,
+TC19,Logout back refresh,session,PASS,
+TC20,Isolated browser session,session,PASS,

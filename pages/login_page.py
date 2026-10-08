@@ -48,3 +48,9 @@ class LoginPage(BasePage):
 
     def has_authenticated_user(self):
         return HomePage(self.driver, self.base_url, self.timeout).has_authenticated_user()
+
+    def password_input_type(self):
+        return self._visible(self._PASSWORD).get_attribute('type')
+
+    def password_value(self):
+        return self._visible(self._PASSWORD).get_property('value')

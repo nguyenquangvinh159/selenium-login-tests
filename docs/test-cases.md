@@ -101,3 +101,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Nhập dữ liệu → bấm Login → chờ phản hồi.
 - Kỳ vọng: Thông tin đăng nhập bị từ chối; không hiện tài khoản đã đăng nhập.
 - Tự động hóa: tests/test_tc10_whitespace_password.py.
+
+## TC11 - Trường mật khẩu che ký tự
+
+- Nhóm / ưu tiên: ui / Trung bình.
+- Tiền điều kiện: Không cần tài khoản; mở /login.
+- Dữ liệu: Mật khẩu giả MaskMe9!.
+- Bước: Nhập dữ liệu và đọc thuộc tính trường mật khẩu.
+- Kỳ vọng: Trường giữ đúng giá trị đã nhập nhưng có type=password để trình duyệt che ký tự.
+- Tự động hóa: tests/test_tc11_password_masked.py.

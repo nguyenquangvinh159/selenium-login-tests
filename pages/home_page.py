@@ -72,3 +72,8 @@ class HomePage(BasePage):
         self.driver.refresh()
         self._visible(self._LOGIN_LINK)
         return self
+
+    def open_anonymous(self):
+        self.driver.get(self.base_url + '/')
+        self._visible(self._LOGIN_LINK)
+        return self

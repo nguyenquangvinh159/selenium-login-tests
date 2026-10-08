@@ -182,3 +182,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Đăng nhập → Logout → Back → Refresh để kiểm tra trạng thái mới từ server.
 - Kỳ vọng: Sau refresh hiện Signup / Login, không hiện tên tài khoản/Logout. Không kết luận an toàn backend chỉ từ kiểm tra UI này.
 - Tự động hóa: tests/test_tc19_logout_back_refresh.py.
+
+## TC20 - Phiên trình duyệt mới không kế thừa đăng nhập
+
+- Nhóm / ưu tiên: session / Cao.
+- Tiền điều kiện: Một Chrome đăng nhập bằng tài khoản riêng; tạo thêm Chrome với profile mặc định độc lập.
+- Dữ liệu: Hai WebDriver riêng, không sao chép cookie hoặc user-data-dir.
+- Bước: Đăng nhập ở browser A → mở website ở browser B → kiểm tra lại A.
+- Kỳ vọng: B chưa đăng nhập; A vẫn đăng nhập đúng người dùng; teardown đóng cả hai browser.
+- Tự động hóa: tests/test_tc20_isolated_browser_session.py.

@@ -92,3 +92,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Nhập dữ liệu → bấm Login → chờ phản hồi.
 - Kỳ vọng: Báo thông tin sai; không tạo phiên đăng nhập.
 - Tự động hóa: tests/test_tc09_password_case_sensitive.py.
+
+## TC10 - Mật khẩu chỉ chứa khoảng trắng
+
+- Nhóm / ưu tiên: negative / Cao.
+- Tiền điều kiện: Tạo tài khoản có mật khẩu không rỗng; mở /login.
+- Dữ liệu: Email đúng; mật khẩu là ba dấu cách.
+- Bước: Nhập dữ liệu → bấm Login → chờ phản hồi.
+- Kỳ vọng: Thông tin đăng nhập bị từ chối; không hiện tài khoản đã đăng nhập.
+- Tự động hóa: tests/test_tc10_whitespace_password.py.

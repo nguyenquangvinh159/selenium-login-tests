@@ -33,3 +33,7 @@ class HomePage(BasePage):
         login = LoginPage(self.driver, self.base_url, self.timeout)
         login.is_displayed()
         return login
+
+    def refresh(self):
+        self.driver.refresh()
+        return self.wait_logged_in()

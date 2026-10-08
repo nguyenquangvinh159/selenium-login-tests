@@ -146,3 +146,12 @@ Phạm vi: form đăng nhập và vòng đời phiên đăng nhập; không ki�
 - Bước: Đăng nhập → bấm Logout.
 - Kỳ vọng: Quay lại /login, hiện form và Signup / Login; không còn tên tài khoản hoặc Logout.
 - Tự động hóa: tests/test_tc15_logout.py.
+
+## TC16 - Duy trì phiên sau khi tải lại trang
+
+- Nhóm / ưu tiên: session / Cao.
+- Tiền điều kiện: Tài khoản riêng được đăng nhập trong chính test.
+- Dữ liệu: Tài khoản thử nghiệm đúng.
+- Bước: Đăng nhập → refresh trang hiện tại.
+- Kỳ vọng: Sau tải lại vẫn hiện đúng tên và Logout.
+- Tự động hóa: tests/test_tc16_session_after_refresh.py.
